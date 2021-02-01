@@ -43,6 +43,7 @@ function displayResult(numberGuess){
     showNumberBelow();
   } else {
     showYouWon();
+    showAttempt();
   }
 }
 
@@ -61,6 +62,8 @@ function initGame(){
   guesses = [];
   // reset the guess history display
   displayHistory();
+  // reset attempt dispaly
+  document.getElementById("attempt").innerHTML = '';
 }
 
 /**
@@ -169,4 +172,11 @@ function showNumberBelow(){
   // *CODE GOES BELOW HERE *
   let dialog = getDialog('warning',text);
   document.getElementById("result").innerHTML = dialog;
+}
+
+function showAttempt(){
+
+  let text = "<div class='alert alert-info' role='alert'> You won in " + (guesses.length +1) + " attempt </div>";
+  document.getElementById("attempt").innerHTML = text;
+
 }

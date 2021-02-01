@@ -1,4 +1,4 @@
-#number-guess, #result, #history {
+#attempt, #number-guess, #result, #history {
     max-width: 400px;
     margin: 0 auto;
 }
